@@ -9,7 +9,3 @@ dependencies = [
     "pyyaml>=6.0.3",
     "jsonschema>=4.26.0"
 ]
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
