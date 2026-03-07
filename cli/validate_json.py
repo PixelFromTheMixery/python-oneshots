@@ -21,6 +21,7 @@ def load_validators_in_folder(target_schema):
 
         content = json.loads(current_file.read_text(encoding="utf-8"))
         resource = Resource.from_contents(content)
+        print(f"Indexed: {resource.id()}")
         resources.append((resource.id(), resource))
         if current_file == target_path:
             main_content = content
@@ -65,7 +66,7 @@ def main():
             error_list.append(f"❌ Error at [{error_path}]: {error.message}")
 
         with open("errors.txt", "w", encoding="utf-8") as f:
-            f.writelines(error_list)
+            f.write("\n".join(error_list))
 
 
 if __name__ == "__main__":
