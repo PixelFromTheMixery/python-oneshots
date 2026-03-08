@@ -1,7 +1,9 @@
 """Module for validating json file against (nested) schema"""
 
 import json
+import os
 from pathlib import Path
+
 
 from jsonschema import Draft202012Validator
 from referencing import Registry, Resource
@@ -59,6 +61,8 @@ def main():
 
     if not errors:
         print(f"✅ {args.json} is clean!")
+        if os.path.exists("errors.txt"):
+            os.remove("errors.txt")
     else:
         error_list = []
         for error in errors:
