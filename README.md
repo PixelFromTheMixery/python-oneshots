@@ -3,7 +3,7 @@ Mini scripts I've used as exercises and tools for my games. I hope they help you
 
 ## 🍪 List of treats
 ### CLI Tools
-[`csv_to_yaml.py`](#csv_to_yamlpy) - Uses CSV header as keys for a list of YAML mappings
+[`data_file_converter.py`](#data_file_converterpy) - Converts files
 
 ### Script Tools
 [`args_parse.py`](#args_parserpy) - Returns a namespace object to use based on supplied dictionary
@@ -11,12 +11,20 @@ Mini scripts I've used as exercises and tools for my games. I hope they help you
 [`validate_json.py`](#validate_jsonpy) - Validates json file against (nested) schema
 
 # CLI Tools
-## [`csv_to_yaml.py`](./cli/csv_to_yaml.py)
-Uses CSV header as keys for a list of YAML mappings
-- Best used in same directory
+## [`data_file_converter.py`](./cli/data_file_converter.py)
+Converts files
+- Best used in same directory, but tolerates relative paths
 - Initially used for exporting Notion database export to YAML
-- Supports basic data types only
+- Inputs supported
+  - csv
+  - json
+  - yaml
+- Outputs supported
+  - json
+  - yaml
+- (csv > *) Supports basic data types only
   - Contained array turned into `,` seperated string as a workaround
+
 
 ### Requires
 - module: yaml
@@ -30,7 +38,6 @@ Uses CSV header as keys for a list of YAML mappings
 
 ### Potential expansion
 - Decoupling from my other tool
-- I am likely to make a YAML to JSON converter as Godot prefers JSON
 - Support for more types
 
 [Back to top](#-list-of-treats)
