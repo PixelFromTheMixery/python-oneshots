@@ -12,9 +12,9 @@ Mini scripts I've used as exercises and tools for my games. I hope they help you
 
 # CLI Tools
 ## [`data_file_converter.py`](./cli/data_file_converter.py)
-Converts files
+Converts or transforms data files
 - Best used in same directory, but tolerates relative paths
-- Initially used for exporting Notion database export to YAML
+- Initially used for exporting Notion database export to YAML, now used as swiss army knife
 - Inputs supported
   - csv
   - json
@@ -23,7 +23,7 @@ Converts files
   - json
   - yaml
 - (csv > *) Supports basic data types only
-  - Contained array turned into `,` seperated string as a workaround
+  - Contained array turned into `,` separated string as a workaround
 
 
 ### Requires

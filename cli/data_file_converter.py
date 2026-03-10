@@ -1,4 +1,4 @@
-"""Converts files"""
+"""Converts or transforms data files"""
 
 import csv
 import json
@@ -54,7 +54,7 @@ def yaml_pull(f):
 
 # Converter
 def converter(data, output_type):
-    """Central converter script for exports"""
+    """Central converter script, can be expanded for transformation"""
     if output_type == "json":
         return json.dumps(data)
     if output_type == "yaml":
